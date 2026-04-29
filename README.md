@@ -20,7 +20,7 @@ This repository accompanies the paper *Annotation Integrity, Concept Bottleneck 
 
 The figure below depicts the hard CBM with stop-gradient used in this work. An input image passes through a backbone to produce a feature vector. Ten separate concept heads predict logits for each dermoscopic concept, which are converted into hard one-hot vectors via argmax. The stop-gradient operator at the bottleneck ensures that the label classifier and its loss do not influence the backbone parameters.
 
-<img width="1680" height="731" alt="image" src="https://github.com/user-attachments/assets/b430fe5a-cdd6-40f8-8ff8-e21662b6b8cd" />
+<img width="1260" height="548" alt="image" src="https://github.com/user-attachments/assets/b430fe5a-cdd6-40f8-8ff8-e21662b6b8cd" />
 
 
 ---
