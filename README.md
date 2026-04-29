@@ -149,7 +149,9 @@ EfficientNet-B0 achieves the strongest diagnostic performance while remaining th
 
 ## SOFI Explanation Analysis
 
-SOFI explanations were computed for all 174 correctly classified test images (85 melanoma, 89 nevus). For melanoma, *peripheral dots and globules* = present dominates with a SOFI score of 73.58 and appears as the top-ranked concept in 95.3% of correctly classified melanoma images. *Vessel pattern* = polymorphous and *white structures* = present form a secondary tier, with scores of 28.00 and 25.00, respectively. Most melanoma predictions are driven by four concepts on average.
+SOFI explanations were computed for all 174 correctly classified test images (85 melanoma, 89 nevus). 
+
+For melanoma, *peripheral dots and globules* = present dominates with a SOFI score of 73.58 and appears as the top-ranked concept in 95.3% of correctly classified melanoma images. *Vessel pattern* = polymorphous and *white structures* = present form a secondary tier, with scores of 28.00 and 25.00, respectively. Most melanoma predictions are driven by four concepts on average.
 
 For nevus, all five concept states appearing in the top-k explanations are absence states. *Peripheral dots and globules* = absent, *scar pigmentation* = absent, *white structures* = absent, and *grey structures* = absent each appear in more than 92% of correctly classified nevus images, with a mean concept head confidence above 0.94.
 
@@ -164,8 +166,8 @@ If you use HAM3611C10 or the CBM implementation in your work, please cite:
   title   = {Annotation Integrity, Concept Bottleneck Models, and Sparse Explanations
              for Dermoscopic Melanoma Classification},
   author  = {N{\'a}poles, Gonzalo and Grau, Isel and Salgueiro, Yamisleydi},
-  journal = {[journal name]},
-  year    = {2025}
+  journal = {TBA},
+  year    = {2026}
 }
 ```
 
