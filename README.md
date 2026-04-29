@@ -18,9 +18,9 @@ This repository accompanies the paper *Annotation Integrity, Concept Bottleneck 
 
 ## Architecture
 
-The figure below depicts the hard CBM with stop-gradient used in this work. An input image passes through a backbone to produce a feature vector. Ten separate concept heads predict logits for each dermoscopic concept, which are converted into hard one-hot vectors via argmax. The stop-gradient operator at the bottleneck ensures that the label classifier and its loss do not influence the backbone parameters.
+The figure depicts the forward pass and gradient flow of the hard CBM. A dermoscopic image is fed into a backbone that extracts a feature vector. This vector is passed to each concept head, which predicts the state of one dermoscopic concept. The predicted states are discretized into hard one-hot vectors and concatenated to form the concept bottleneck, which a label classifier then uses to produce the melanoma vs. nevus diagnosis. All components are trained jointly in a single stage, with two separate loss signals shown as dashed lines at the bottom. The concept loss drives the backbone and concept heads, while the diagnostic loss drives only the label classifier. A stop-gradient operator at the bottleneck blocks the diagnostic loss from reaching the backbone and concept heads, so those components are updated only by the concept loss computed against the ground-truth dermoscopic annotations. This decoupling preserves the semantic purity of the bottleneck, preventing the concept representations from being distorted by downstream classification pressure.
 
-<img width="1260" height="548" alt="image" src="https://github.com/user-attachments/assets/b430fe5a-cdd6-40f8-8ff8-e21662b6b8cd" />
+<p align="center"><img width="75%" alt="image" src="https://github.com/user-attachments/assets/b430fe5a-cdd6-40f8-8ff8-e21662b6b8cd" /></p>
 
 
 ---
